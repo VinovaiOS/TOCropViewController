@@ -416,6 +416,7 @@
                                         toFrame:(CGRect)frame
                                           setup:(nullable void (^)(void))setup
                                      completion:(nullable void (^)(void))completion NS_SWIFT_NAME(dismissAnimatedFrom(_:croppedImage:toView:toFrame:setup:completion:));
+- (void)doneButtonTapped;
 
 @end
 
