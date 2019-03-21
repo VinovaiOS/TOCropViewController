@@ -100,7 +100,7 @@ open class CropViewController: UIViewController, TOCropViewControllerDelegate {
     }
     
     /**
-     Set the title text that appears at the top of the view controller
+     Set the title text xthat appears at the top of the view controller
     */
     override open var title: String? {
         set { toCropViewController.title = newValue }
@@ -379,7 +379,7 @@ open class CropViewController: UIViewController, TOCropViewControllerDelegate {
      This class internally manages and abstracts access to a `TOCropViewController` instance
      :nodoc:
      */
-    internal let toCropViewController: TOCropViewController!
+    public let toCropViewController: TOCropViewController!
     
     /**
      Forward status bar status style changes to the crop view controller
@@ -447,15 +447,15 @@ open class CropViewController: UIViewController, TOCropViewControllerDelegate {
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // Defer adding the view until we're about to be presented
-        if toCropViewController.view.superview == nil {
-            view.addSubview(toCropViewController.view)
-        }
+//        // Defer adding the view until we're about to be presented
+//        if toCropViewController.view.superview == nil {
+//            view.addSubview(toCropViewController.view)
+//        }
     }
     
     open override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        toCropViewController.view.frame = view.bounds
+//        toCropViewController.view.frame = view.bounds
         toCropViewController.viewDidLayoutSubviews()
     }
     
